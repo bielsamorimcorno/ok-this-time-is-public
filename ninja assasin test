@@ -1,45 +1,46 @@
 
 local ScreenGui = Instance.new("ScreenGui")
-local main = Instance.new("Frame")
-local bieltestgui = Instance.new("TextLabel")
-local autotrain = Instance.new("TextButton")
-local raibown = Instance.new("TextButton")
-local rainbownying = Instance.new("TextButton")
-local bestshurikenying = Instance.new("TextButton")
-local shuriken = Instance.new("TextButton")
-local yield = Instance.new("TextButton")
-local bestyangsword = Instance.new("TextButton")
-local bestyingsword = Instance.new("TextButton")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local AutoFarm = Instance.new("TextButton")
+local RainbownYang = Instance.new("TextButton")
+local RainbownYing = Instance.new("TextButton")
+local BestYangClothe = Instance.new("TextButton")
+local BestYingClothe = Instance.new("TextButton")
+local BestYangSword = Instance.new("TextButton")
+local BestYingSword = Instance.new("TextButton")
+local Yield = Instance.new("TextButton")
 
 --Properties:
 
 ScreenGui.Parent = game.CoreGui
-main.Name = "main"
-main.Parent = ScreenGui
-main.BackgroundColor3 = Color3.fromRGB(255, 6, 106)
-main.BorderColor3 = Color3.fromRGB(53, 8, 38)
-main.Position = UDim2.new(0.275101691, 0, 0.220367283, 0)
-main.Size = UDim2.new(0, 640, 0, 353)
 
-bieltestgui.Name = "biel test gui"
-bieltestgui.Parent = main
-bieltestgui.BackgroundColor3 = Color3.fromRGB(248, 170, 255)
-bieltestgui.Size = UDim2.new(0, 640, 0, 72)
-bieltestgui.Font = Enum.Font.SourceSans
-bieltestgui.Text = "biel test gui.v1"
-bieltestgui.TextColor3 = Color3.fromRGB(0, 0, 0)
-bieltestgui.TextSize = 14.000
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(96, 64, 255)
+Frame.Position = UDim2.new(0.337635487, 0, 0.245409012, 0)
+Frame.Size = UDim2.new(0, 479, 0, 304)
+main.active = true
+main.Draggable= true
 
-autotrain.Name = "auto train"
-autotrain.Parent = main
-autotrain.BackgroundColor3 = Color3.fromRGB(112, 30, 170)
-autotrain.Position = UDim2.new(0.292187512, 0, 0.3342776, 0)
-autotrain.Size = UDim2.new(0, 103, 0, 45)
-autotrain.Font = Enum.Font.SourceSans
-autotrain.Text = "auto train "
-autotrain.TextColor3 = Color3.fromRGB(0, 0, 0)
-autotrain.TextSize = 14.000
-autotrain.MouseButtonlDown:connect(function()
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(76, 214, 255)
+TextLabel.Size = UDim2.new(0, 477, 0, 39)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "biel ninja assasin gui v1"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+
+
+AutoFarm.Name = "AutoFarm"
+AutoFarm.Parent = Frame
+AutoFarm.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+AutoFarm.Position = UDim2.new(0.149258375, 0, 0.127868846, 0)
+AutoFarm.Size = UDim2.new(0, 118, 0, 52)
+AutoFarm.Font = Enum.Font.SourceSans
+AutoFarm.Text = "AutoFarm"
+AutoFarm.TextColor3 = Color3.fromRGB(0, 0, 0)
+AutoFarm.TextSize = 14.000
+AutoFarm.MouseButtonlDown:connect(function()
 	while true do
 		wait(0.25)
 		game.ReplicatedStorage.RemoteEvent.AddPowerEvent:FireServer("FromTraining", 10)
@@ -52,18 +53,17 @@ autotrain.MouseButtonlDown:connect(function()
 	end
 end)
 
-
-raibown.Name = "raibown"
-raibown.Parent = main
-raibown.BackgroundColor3 = Color3.fromRGB(115, 255, 162)
-raibown.Position = UDim2.new(0.1953125, 0, 0.790368259, 0)
-raibown.Size = UDim2.new(0, 103, 0, 45)
-raibown.Font = Enum.Font.SourceSans
-raibown.Text = "Rainbown Clothes "
-raibown.TextColor3 = Color3.fromRGB(0, 0, 0)
-raibown.TextSize = 12.000
-rainbown.MouseButtonlDown:connect(function()
-	while true do
+RainbownYang.Name = "RainbownYang"
+RainbownYang.Parent = Frame
+RainbownYang.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+RainbownYang.Position = UDim2.new(0.394550145, 0, 0.127868846, 0)
+RainbownYang.Size = UDim2.new(0, 118, 0, 52)
+RainbownYang.Font = Enum.Font.SourceSans
+RainbownYang.Text = "RainbownYang"
+RainbownYang.TextColor3 = Color3.fromRGB(0, 0, 0)
+RainbownYang.TextSize = 14.000
+RainbownYang.MouseButtonlDown:connect(function()
+while true do
 		wait(0.25)
 		game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang18") --best Yang Cloth
 		wait(0.25)
@@ -80,19 +80,19 @@ rainbown.MouseButtonlDown:connect(function()
 		game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang12") --best Yang Cloth
 		wait(0.25)
 	end
-end)
 
+end
 
-rainbownying.Name = "rainbown ying"
-rainbownying.Parent = main
-rainbownying.BackgroundColor3 = Color3.fromRGB(137, 78, 255)
-rainbownying.Position = UDim2.new(0.517187476, 0, 0.790368259, 0)
-rainbownying.Size = UDim2.new(0, 103, 0, 45)
-rainbownying.Font = Enum.Font.SourceSans
-rainbownying.Text = "rainbow (YING)"
-rainbownying.TextColor3 = Color3.fromRGB(0, 0, 0)
-rainbownying.TextSize = 12.000
-rainbownying.MouseButtonlDown:connect(function()
+RainbownYing.Name = "RainbownYing"
+RainbownYing.Parent = Frame
+RainbownYing.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+RainbownYing.Position = UDim2.new(0.639841974, 0, 0.127868846, 0)
+RainbownYing.Size = UDim2.new(0, 118, 0, 52)
+RainbownYing.Font = Enum.Font.SourceSans
+RainbownYing.Text = "RainbownYing"
+RainbownYing.TextColor3 = Color3.fromRGB(0, 0, 0)
+RainbownYing.TextSize = 14.000
+RainbownYing.MouseButtonlDown:connect(function()
 	while true do
 		wait(0.25)
 		game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying18") --best Yang Cloth
@@ -111,70 +111,63 @@ rainbownying.MouseButtonlDown:connect(function()
 		wait(0.25)
 	end
 end)
-
-
-bestshurikenying.Name = "best shuriken ying"
-bestshurikenying.Parent = main
-bestshurikenying.BackgroundColor3 = Color3.fromRGB(130, 88, 255)
-bestshurikenying.Position = UDim2.new(0.839062512, 0, 0.790368259, 0)
-bestshurikenying.Size = UDim2.new(0, 86, 0, 45)
-bestshurikenying.Font = Enum.Font.SourceSans
-bestshurikenying.Text = "best shuriken ying"
-bestshurikenying.TextColor3 = Color3.fromRGB(0, 0, 0)
-bestshurikenying.TextSize = 14.000
-rainbown.MouseButtonlDown:connect(function()
-	game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken9Ying")
+BestYangClothe.Name = "BestYangClothe"
+BestYangClothe.Parent = Frame
+BestYangClothe.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+BestYangClothe.Position = UDim2.new(-1.86264515e-09, 0, 0.298921466, 0)
+BestYangClothe.Size = UDim2.new(0, 118, 0, 52)
+BestYangClothe.Font = Enum.Font.SourceSans
+BestYangClothe.Text = "BestYangClothe"
+BestYangClothe.TextColor3 = Color3.fromRGB(0, 0, 0)
+BestYangClothe.TextSize = 14.000
+BestYangClothe.MouseButtonlDown:connect(function()
+	game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Yang26")
 end)
-
-shuriken.Name = "shuriken"
-shuriken.Parent = main
-shuriken.BackgroundColor3 = Color3.fromRGB(78, 255, 167)
-shuriken.Position = UDim2.new(0.0343750045, 0, 0.790368259, 0)
-shuriken.Size = UDim2.new(0, 103, 0, 45)
-shuriken.Font = Enum.Font.SourceSans
-shuriken.Text = "best shuriken yang"
-shuriken.TextColor3 = Color3.fromRGB(0, 0, 0)
-shuriken.TextSize = 11.000
-shuriken.MouseButtonlDown:connect(function()
-	game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Shuriken", "Shuriken9Yang")
+BestYingClothe.Name = "BestYingClothe"
+BestYingClothe.Parent = Frame
+BestYingClothe.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+BestYingClothe.Position = UDim2.new(0.210855946, 0, 0.298921466, 0)
+BestYingClothe.Size = UDim2.new(0, 118, 0, 52)
+BestYingClothe.Font = Enum.Font.SourceSans
+BestYingClothe.Text = "BestYingClothe"
+BestYingClothe.TextColor3 = Color3.fromRGB(0, 0, 0)
+BestYingClothe.TextSize = 14.000
+BestYingClothe.MouseButtonlDown:connect(function()
+	game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Cloth", "Ying26")
 end)
-
-yield.Name = "yield"
-yield.Parent = main
-yield.BackgroundColor3 = Color3.fromRGB(255, 7, 11)
-yield.Position = UDim2.new(0.528124988, 0, 0.33427763, 0)
-yield.Size = UDim2.new(0, 103, 0, 45)
-yield.Font = Enum.Font.SourceSans
-yield.Text = "admin script"
-yield.TextColor3 = Color3.fromRGB(0, 0, 0)
-yield.TextSize = 14.000
-yield.MouseButtonlDown:connect(function()
-	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-end)
-
-bestyangsword.Name = "best yang sword"
-bestyangsword.Parent = main
-bestyangsword.BackgroundColor3 = Color3.fromRGB(143, 255, 214)
-bestyangsword.Position = UDim2.new(0.356250048, 0, 0.790368259, 0)
-bestyangsword.Size = UDim2.new(0, 103, 0, 45)
-bestyangsword.Font = Enum.Font.SourceSans
-bestyangsword.Text = "best yang sword"
-bestyangsword.TextColor3 = Color3.fromRGB(0, 0, 0)
-bestyangsword.TextSize = 14.000
-rainbown.MouseButtonlDown:connect(function()
+BestYangSword.Name = "BestYangSword"
+BestYangSword.Parent = Frame
+BestYangSword.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+BestYangSword.Position = UDim2.new(0.457202494, 0, 0.298921466, 0)
+BestYangSword.Size = UDim2.new(0, 118, 0, 52)
+BestYangSword.Font = Enum.Font.SourceSans
+BestYangSword.Text = "BestYangSword"
+BestYangSword.TextColor3 = Color3.fromRGB(0, 0, 0)
+BestYangSword.TextSize = 14.000
+BestYangSword.MouseButtonlDown:connect(function()
 	game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Sword", "BlackAndWhiteWingedSword")
 end)
-
-bestyingsword.Name = "best ying sword"
-bestyingsword.Parent = main
-bestyingsword.BackgroundColor3 = Color3.fromRGB(167, 26, 255)
-bestyingsword.Position = UDim2.new(0.678124964, 0, 0.790368259, 0)
-bestyingsword.Size = UDim2.new(0, 103, 0, 45)
-bestyingsword.Font = Enum.Font.SourceSans
-bestyingsword.Text = "best ying sword"
-bestyingsword.TextColor3 = Color3.fromRGB(0, 0, 0)
-bestyingsword.TextSize = 12.000
-rainbown.MouseButtonlDown:connect(function()
+BestYingSword.Name = "BestYingSword"
+BestYingSword.Parent = Frame
+BestYingSword.BackgroundColor3 = Color3.fromRGB(140, 83, 255)
+BestYingSword.Position = UDim2.new(0.703549087, 0, 0.298921496, 0)
+BestYingSword.Size = UDim2.new(0, 136, 0, 52)
+BestYingSword.Font = Enum.Font.SourceSans
+BestYingSword.Text = "BestYingSword"
+BestYingSword.TextColor3 = Color3.fromRGB(0, 0, 0)
+BestYingSword.TextSize = 14.000
+BestYingSword.MouseButtonlDown:connect(function()
 	game.ReplicatedStorage.RemoteEvent.GiveItemEvent:FireServer("Sword", "UltraKatana")
-
+end)
+Yield.Name = "Yield"
+Yield.Parent = Frame
+Yield.BackgroundColor3 = Color3.fromRGB(255, 53, 157)
+Yield.Position = UDim2.new(0.210855946, 0, 0.654184639, 0)
+Yield.Size = UDim2.new(0, 276, 0, 52)
+Yield.Font = Enum.Font.SourceSans
+Yield.Text = "admin"
+Yield.TextColor3 = Color3.fromRGB(0, 0, 0)
+Yield.TextSize = 14.000
+Yield.MouseButtonlDown:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
 end)
