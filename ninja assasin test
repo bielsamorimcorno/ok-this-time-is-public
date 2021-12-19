@@ -1,4 +1,4 @@
--adamantiun#2589-
+
 local ScreenGui = Instance.new("ScreenGui")
 local main = Instance.new("Frame")
 local bieltestgui = Instance.new("TextLabel")
